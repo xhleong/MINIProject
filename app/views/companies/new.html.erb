@@ -1,0 +1,33 @@
+<h1>Create New Company</h1>
+
+<%= form_with url: companies_path, scope: :company, local: true do |form| %>
+    <% if @company.errors.any? %>
+        <p><%= pluralize(@company.errors.count,"error") %> found:
+        <% @company.errors.full_messages.each do |messages| %>
+            <p><%= messages %></p>
+        <% end %>
+    <% end %>
+    
+    <p>
+        Company Name: 
+        <%= form.text_field :company_name %>
+    </p>
+    <p>
+        Industry:<%= form.text_field :industry %>
+    </p>    
+    <p>
+        Country:<%= form.text_field :country %>
+    </p>    
+    <p>
+        Business Registration No.:<%= form.text_field :company_reg %>
+    </p>    
+    <p>
+        Contact Person :<%= form.text_field :contact_person %>
+    </p>    
+    <p>
+        Contact Number :<%= form.text_field :contact_num %>
+    </p>    
+    <p>
+        <%= form.submit %>
+    </p>
+<% end %>
