@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'fbe7e3d3416b123cbaa29fd20924f54d3f1fca874beb741950925b0fc39a5bc4d6dcc3f50a4cc32b0f572289a72d8aea69842db28e7dbd762b0cb6dffa170e35'
+  # config.secret_key = 'c6243f2ae1c77be7c1b62b11f861dc22d2ee7bf1b6c2d1763934659b8de335b501cb90767db7dd2079418c49638fcbcafe2fc0870b8dd94a184993c67e37457d'
   
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -18,7 +18,7 @@ Devise.setup do |config|
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class
   # with default "from" parameter.
-  config.mailer_sender = 'user_account@miniCMS.com'
+  config.mailer_sender = 'support@MiniCMS.com'
 
   # Configure the class responsible to send e-mails.
   # config.mailer = 'Devise::Mailer'
@@ -114,7 +114,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 11
 
   # Set up a pepper to generate the hashed password.
-  # config.pepper = '1c83676cf4025fceb8c063783856e909e1dae5b630945133ae931c0db661e2cf5a62e54efab2f340648c25119df8df63a647943a31430d0d14a8e37ee341655d'
+  # config.pepper = 'c81803486cae6fea029882d75beb26c2e20dda2351becd51cbdb53046bc3005a3e41de4e222482e51c51fb470ed55f0f069091fcfccb23e9ac565988f5cfdbb0'
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -223,13 +223,13 @@ Devise.setup do |config|
   # stretches to 10, and copy REST_AUTH_SITE_KEY to pepper).
   #
   # Require the `devise-encryptable` gem when using anything other than bcrypt
-  # config.encryptor = :sha512
+  # config.encryptor = :sha512s
 
   # ==> Scopes configuration
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "users/sessions/new". It's turned off by default because it's slower if you
   # are using only default views.
-  # config.scoped_views = false
+  config.scoped_views = true
 
   # Configure the default scope given to Warden. By default it's the first
   # devise role declared in your routes (usually :user).
